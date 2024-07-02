@@ -39,10 +39,6 @@ spec:
           args:
             - --insecure=true
             - --debug=true
-          ports:
-            - name: http
-              containerPort: {{ .Values.service.port }}
-              protocol: TCP
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
