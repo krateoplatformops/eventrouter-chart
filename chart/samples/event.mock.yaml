@@ -1,0 +1,22 @@
+apiVersion: v1
+firstTimestamp: "2022-08-18T15:12:07Z"
+involvedObject:
+  apiVersion: eks.aws.crossplane.io/v1alpha1
+  kind: NodeGroup
+  name: test-1-ng
+  resourceVersion: "17223"
+  uid: 6365c158-8ee1-4d36-a33a-ba3cc0958ee1
+kind: Event
+lastTimestamp: "2022-08-18T15:12:09Z"
+message: 'cannot create EKS node group: ResourceInUseException: Cluster: test-1 is
+  not in a valid state'
+metadata:
+  annotations:
+    external-name: test-1-ng
+  name: test-2-ng.170c791ccd13d0cr
+  namespace: default
+  #uid: 90e8c2fe-a54f-4e74-962d-8e6abbce196d
+reason: CannotCreateExternalResource
+source:
+  component: managed/nodegroup
+type: Warning
