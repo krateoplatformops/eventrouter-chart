@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: {{ include "eventrouter.fullname" . }}
+  name: {{ include "eventrouter.fullname" . }}-{{ .Release.Namespace }}
   labels:
     {{- include "eventrouter.labels" . | nindent 4 }}
 rules:
